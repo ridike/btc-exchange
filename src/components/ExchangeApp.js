@@ -57,7 +57,7 @@ export default class ExchangeApp extends React.Component{
         console.log(`Error: ${error.stack}`);
       }
       // remove iterations to keep fetching the data from the API
-    }, 5000, {iterations: 100})
+    }, 60000, {iterations: 100})
   }
 
   // Display a new value field
