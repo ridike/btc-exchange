@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './FlashMessage.css';
 
 export default class FlashMessage extends React.Component {
@@ -10,7 +9,7 @@ export default class FlashMessage extends React.Component {
 		};
   }
 	componentWillReceiveProps(nextProps) {
-	  this.setState({ counter: nextProps.count });  
+	  this.setState({ counter: nextProps.count });
 	}
   render() {
     return (

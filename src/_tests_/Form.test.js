@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import InputForm from '../components/Form';
+import { InputForm } from '../components/Form';
 
 test('Form component renders input field for a BTC value', () => {
 
