@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class InputForm extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ export default class InputForm extends React.Component {
           <input
             type="number"
             min="0"
+            max="100000000000000"
             step="0.0001"
             value={value}
             onChange={this.handleChange}
@@ -45,4 +47,8 @@ export default class InputForm extends React.Component {
       </form>
     );
   }
+}
+
+InputForm.propTypes = {
+  calculateValue: PropTypes.func.isRequired,
 }

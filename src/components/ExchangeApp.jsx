@@ -115,7 +115,10 @@ export default class ExchangeApp extends React.Component {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-4">
+            <span className="font-italic">Try removing a currency field</span>
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-6">
               { currencyValues.map(v => v.display
                   && <CurrencyValue currency={v} key={v.code} remove={this.hideCurrencyField} />)
               }
