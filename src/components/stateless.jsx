@@ -1,13 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
+/* eslint-disable react/jsx-one-expression-per-line */
 export const Title = ({ valuesCount }) => (
   <div>
     <h1 className="display-3 text-center">
-      {valuesCount}
-      BTC exchange values
+      {valuesCount} BTC exchange values
     </h1>
   </div>
 )
+/* eslint-enable */
 
 export const CurrencyValue = ({ currency, remove }) => (
   <li className={`list-group-item list-group-item-action d-flex justify-content-between ${currency.display ? 'd-block' : 'd-none'}`}>
@@ -53,3 +55,17 @@ export const CurrencyDropdown = ({ currencies, add }) => (
     </div>
   </div>
 )
+
+Title.propTypes = {
+  valuesCount: PropTypes.number.isRequired,
+}
+
+CurrencyValue.propTypes = {
+  currency: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  remove: PropTypes.func.isRequired,
+}
+
+CurrencyDropdown.propTypes = {
+  currencies: PropTypes.arrayOf(PropTypes.currency).isRequired,
+  add: PropTypes.func.isRequired,
+}
