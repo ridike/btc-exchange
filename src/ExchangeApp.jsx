@@ -5,8 +5,8 @@ import {
   CurrencyDropdown,
   CurrencyValue,
   CounterMessage,
-} from 'components/stateless';
-import InputForm from './Form';
+} from './components/stateless';
+import InputForm from './components/Form';
 
 const API = 'https://api.coindesk.com/v1/bpi/currentprice.json';
 

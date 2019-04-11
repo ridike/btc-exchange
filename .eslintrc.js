@@ -30,7 +30,7 @@ module.exports = {
     'jsx/one-expression-per-line': 'off',
     'react/destructuring-assignment': 'off',
     'semi': 'off',
-    'no-param-reassign': ["error", { "props": false }]
+    'no-param-reassign': ["error", { "props": false }],
   },
   overrides: [
    {

@@ -31,8 +31,6 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Folder Structure
 
-After creation, your project should look like this:
-
 ```
 btc-exchange/
   README.md

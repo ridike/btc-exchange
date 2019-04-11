@@ -13,7 +13,8 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "0.9.5",
-    "react-test-renderer": "^16.4.1"
+    "react-test-renderer": "^16.4.1",
+    "uglify-js": "github:mishoo/UglifyJS2#harmony"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
