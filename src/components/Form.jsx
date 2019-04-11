@@ -5,7 +5,7 @@ export default class InputForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
+      value: 0,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

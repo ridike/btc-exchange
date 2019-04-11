@@ -5,7 +5,7 @@ import { Title, CurrencyValue, CurrencyDropdown } from '../components/stateless'
 /* global describe, test, expect */
 describe('testing stateless components', () => {
   test('Title component displays page title', () => {
-    const wrapper = mount(<Title valuesCount="3" />);
+    const wrapper = mount(<Title valuesCount={3} />);
 
     const t = wrapper.find('h1');
     expect(t.text()).toBe('3 BTC exchange values');

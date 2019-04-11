@@ -7,6 +7,6 @@ test('Form component renders input field for a BTC value', () => {
   const calculateValue = () => {
     console.log('testing Form Input Field'); // eslint-disable-line
   }
-  const wrapper = mount(<InputForm calculate_value={calculateValue} />);
+  const wrapper = mount(<InputForm calculateValue={calculateValue} />);
   expect(wrapper.find('.input-group-text').length).toBe(2);
 });
