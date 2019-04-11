@@ -4,5 +4,5 @@ import ReactDOM from 'react-dom';
 import ExchangeApp from './components/ExchangeApp';
 import './index.css';
 
-console.clear();
+console.clear(); // eslint-disable-line
 ReactDOM.render(<ExchangeApp />, document.getElementById('root'));

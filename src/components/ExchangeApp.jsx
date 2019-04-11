@@ -98,7 +98,7 @@ export default class ExchangeApp extends React.Component {
       <div>
         <div className="jumbotron">
           <div className="container">
-            <Title values_count={currencyValues.length} />
+            <Title valuesCount={currencyValues.length} />
           </div>
         </div>
         <div className="container">
@@ -114,9 +114,14 @@ export default class ExchangeApp extends React.Component {
               )}
             </div>
           </div>
-          <div className="row justify-content-center">
-            <span className="font-italic">Try removing a currency field</span>
-          </div>
+          { hiddenCurrencies.length === 0 && (
+            <div className="row justify-content-center">
+              <span className="font-italic text-secondary">
+                <i className="fas fa-info-circle text-warning" />
+                Try removing a currency field
+              </span>
+            </div>
+          )}
           <div className="row justify-content-center">
             <div className="col-6">
               { currencyValues.map(v => v.display

@@ -31,26 +31,24 @@ export const CurrencyDropdown = ({ currencies, add }) => (
   <div className="dropdown show">
     <button
       type="button"
-      className="btn btn-info dropdown-toggle"
-      href=""
+      className="btn btn-light dropdown-toggle"
       id="dropdownMenuLink"
       data-toggle="dropdown"
       aria-haspopup="true"
       aria-expanded="false"
     >
-      Display a currency
+      Add a currency to display
     </button>
     <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
       {currencies.map(c => (
-        <button
-          type="button"
-          className="dropdown-item"
+        <a
           href="#"
+          className="dropdown-item"
           key={c.code}
           onClick={() => { add(c.code) }}
         >
           {c.code}
-        </button>
+        </a>
       ))}
     </div>
   </div>
@@ -66,6 +64,6 @@ CurrencyValue.propTypes = {
 }
 
 CurrencyDropdown.propTypes = {
-  currencies: PropTypes.arrayOf(PropTypes.currency).isRequired,
+  currencies: PropTypes.arrayOf(PropTypes.object).isRequired,
   add: PropTypes.func.isRequired,
 }
