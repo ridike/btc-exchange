@@ -30,6 +30,8 @@ export default class ExchangeApp extends React.Component {
         },
       ],
       counter: 0,
+      errorMessage: 'Unfortunately, fetching data was unsuccessful.',
+      errorVisible: false,
     };
     this.displayCurrencyField = this.displayCurrencyField.bind(this);
     this.hideCurrencyField = this.hideCurrencyField.bind(this);
@@ -55,6 +57,7 @@ export default class ExchangeApp extends React.Component {
         this.setState(prevState => ({ counter: prevState.counter + 1 }));
       });
     } catch (error) {
+      this.setState({ errorVisible: true })
       console.log(`Error: ${error.stack}`); // eslint-disable-line
     }
   }
@@ -92,7 +95,12 @@ export default class ExchangeApp extends React.Component {
   }
 
   render() {
-    const { currencyValues, counter } = this.state;
+    const {
+      currencyValues,
+      counter,
+      errorMessage,
+      errorVisible,
+    } = this.state;
     const hiddenCurrencies = currencyValues.filter(cv => !cv.display)
     return (
       <div>
@@ -102,6 +110,13 @@ export default class ExchangeApp extends React.Component {
           </div>
         </div>
         <div className="container">
+          { errorVisible && (
+            <div className="row justify-content-center">
+              <div className="alert alert-danger" role="alert">
+                {errorMessage}
+              </div>
+            </div>
+          )}
           <div className="row">
             <div className="col">
               <FlashMessage count={counter} />
