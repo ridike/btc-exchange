@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { Title, CurrencyValue, CurrencyDropdown } from '../components/stateless';
 import InputForm from '../components/Form';
-import ExchangeApp from '../components/ExchangeApp';
+import ExchangeApp from '../ExchangeApp';
 
 /* global test, expect */
 test('ExchangeApp component renders all the other components for the BTC exchange', () => {
