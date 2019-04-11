@@ -1,5 +1,5 @@
 {
-  "name": "bitcoin_task",
+  "name": "bitcoin_exchange_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

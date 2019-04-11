@@ -32,4 +32,12 @@ module.exports = {
     'semi': 'off',
     'no-param-reassign': ["error", { "props": false }]
   },
+  overrides: [
+   {
+     files: ["index.js"],
+     rules: {
+       'react/jsx-filename-extension': 'off',
+     }
+   }
+ ]
 };

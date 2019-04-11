@@ -54,6 +54,17 @@ export const CurrencyDropdown = ({ currencies, add }) => (
   </div>
 )
 
+export const CounterMessage = ({ count }) => (
+  <div>
+    No of times data fetched from the API:
+    {count}
+  </div>
+)
+
+CounterMessage.propTypes = {
+  count: PropTypes.number.isRequired,
+}
+
 Title.propTypes = {
   valuesCount: PropTypes.number.isRequired,
 }

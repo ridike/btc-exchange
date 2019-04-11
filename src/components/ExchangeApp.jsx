@@ -1,8 +1,12 @@
 import React from 'react';
 import interval from 'interval-promise'
-import { Title, CurrencyDropdown, CurrencyValue } from './stateless';
+import {
+  Title,
+  CurrencyDropdown,
+  CurrencyValue,
+  CounterMessage,
+} from './stateless';
 import InputForm from './Form';
-import FlashMessage from './FlashMessage';
 
 const API = 'https://api.coindesk.com/v1/bpi/currentprice.json';
 
@@ -119,7 +123,7 @@ export default class ExchangeApp extends React.Component {
           )}
           <div className="row">
             <div className="col">
-              <FlashMessage count={counter} />
+              <CounterMessage count={counter} />
               <InputForm calculateValue={this.calculateValue} />
               { hiddenCurrencies.length > 0 && (
                 <CurrencyDropdown
